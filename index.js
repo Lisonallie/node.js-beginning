@@ -20,3 +20,5 @@ standardInput.on('data', function (data) {
     });
 });
 
+// great link for language codes
+// https://www.nationsonline.org/oneworld/country_code_list.htm
