@@ -9,7 +9,7 @@ standardInput.setEncoding('utf-8');
 
 standardInput.on('data', function (data) {
     let fromLang = "";
-    let toLang = "fr";
+    let toLang = "jpn";
 
     axios({
         method: "get",
@@ -17,7 +17,6 @@ standardInput.on('data', function (data) {
         responseType: "JSON"
     }).then(function (response) {
         console.log(response.data.responseData.translatedText);
-        console.log(response.data);
     });
 });
 
