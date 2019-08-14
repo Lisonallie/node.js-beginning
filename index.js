@@ -7,6 +7,7 @@ let standardInput = process.stdin;
 // Set input character encoding.
 standardInput.setEncoding('utf-8');
 
+//data is the physical input. fromLang is automatically detected.
 standardInput.on('data', function (data) {
     let fromLang = "";
     let toLang = "jpn";
@@ -14,8 +15,10 @@ standardInput.on('data', function (data) {
     axios({
         method: "get",
         url: `https://api.mymemory.translated.net/get?q=${data}&langpair=${fromLang}|${toLang}`,
+        // responses are given in JSON as a standard.
         responseType: "JSON"
     }).then(function (response) {
+        // location in the api response where the translation lives. 
         console.log(response.data.responseData.translatedText);
     });
 });
