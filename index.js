@@ -11,7 +11,7 @@ standardInput.setEncoding('utf-8');
 standardInput.on('data', function (data) {
     let fromLang = "";
     let toLang = "jpn";
-
+    
     axios({
         method: "get",
         url: `https://api.mymemory.translated.net/get?q=${data}&langpair=${fromLang}|${toLang}`,
@@ -22,6 +22,7 @@ standardInput.on('data', function (data) {
         console.log(response.data.responseData.translatedText);
     });
 });
+
 
 // great link for language codes
 // https://www.nationsonline.org/oneworld/country_code_list.htm

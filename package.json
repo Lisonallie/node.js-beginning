@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Lisonallie/node.js-beginning#readme",
   "dependencies": {
-    "axios": "^0.19.0"
+    "axios": "^0.19.0",
+    "ora": "^3.4.0"
   }
 }
