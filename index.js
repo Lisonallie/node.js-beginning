@@ -14,8 +14,9 @@ standardInput.on('data', function (data) {
     axios({
         method: "get",
         url: `https://api.mymemory.translated.net/get?q=${data}&langpair=${fromLang}|${toLang}`,
-        responseType: "json"
+        responseType: "JSON"
     }).then(function (response) {
+        console.log(response.data.responseData.translatedText);
         console.log(response.data);
     });
 });
