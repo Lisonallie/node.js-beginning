@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Lisonallie/node.js-beginning/issues"
   },
-  "homepage": "https://github.com/Lisonallie/node.js-beginning#readme"
+  "homepage": "https://github.com/Lisonallie/node.js-beginning#readme",
+  "dependencies": {
+    "email-validator": "^2.0.4"
+  }
 }
